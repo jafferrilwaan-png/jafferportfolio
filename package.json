@@ -1,0 +1,21 @@
+{
+  "name": "zero-university",
+  "version": "1.0.0",
+  "description": "ZERO — Human Infrastructure to Get Hired (WebGL 3D Interactive Experience)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "zero-university",
+    "threejs",
+    "webgl",
+    "3d",
+    "gsap",
+    "audio",
+    "interactive"
+  ],
+  "author": "",
+  "license": "ISC"
+}
