@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const url = require('url');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 const PUBLIC_DIR = path.join(__dirname, 'public');
 
 const MIME_TYPES = {
@@ -88,6 +88,9 @@ function sendFile(req, res, filePath, contentType, stats) {
       'Accept-Ranges': 'bytes',
       'Content-Length': chunksize,
       'Content-Type': contentType,
+      'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0',
+      'Pragma': 'no-cache',
+      'Expires': '0',
       'Access-Control-Allow-Origin': '*'
     });
 
@@ -98,7 +101,9 @@ function sendFile(req, res, filePath, contentType, stats) {
       'Content-Length': stats.size,
       'Content-Type': contentType,
       'Accept-Ranges': 'bytes',
-      'Cache-Control': 'public, max-age=31536000, immutable',
+      'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0',
+      'Pragma': 'no-cache',
+      'Expires': '0',
       'Access-Control-Allow-Origin': '*'
     });
 
@@ -109,9 +114,9 @@ function sendFile(req, res, filePath, contentType, stats) {
 
 server.listen(PORT, () => {
   console.log(`====================================================`);
-  console.log(` ZERO University WebGL 3D Experience is Live!`);
+  console.log(` Jaffer Rilwaan 3D Portfolio Server is Live!`);
   console.log(` URL: http://localhost:${PORT}`);
-  console.log(` Models, Shaders, Sounds & Physics all Loaded.`);
+  console.log(` Cache-Control: NO-CACHE (Instant Live Updates)`);
   console.log(` Press Ctrl+C to stop.`);
   console.log(`====================================================`);
 });
