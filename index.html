@@ -3935,6 +3935,50 @@ html.dark header nav a[href="#contact"] {
   -webkit-text-fill-color: #ffffff !important;
 }
 
+
+/* Hero Card Multi-layer Parallax Dimensions & Stacking */
+.hero-card-container {
+  position: relative !important;
+  overflow: hidden !important;
+  height: 460px !important;
+  min-height: 460px !important;
+}
+.hero-bg-layer {
+  position: absolute !important;
+  top: -36px !important;
+  left: -36px !important;
+  right: -36px !important;
+  bottom: -36px !important;
+  width: calc(100% + 72px) !important;
+  height: calc(100% + 72px) !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  display: block !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+}
+.hero-portrait-layer {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: center !important;
+  pointer-events: none !important;
+  z-index: 2 !important;
+}
+.hero-portrait-layer img {
+  display: block !important;
+  height: 100% !important;
+  width: auto !important;
+  object-fit: contain !important;
+}
+.hero-badge-layer {
+  z-index: 3 !important;
+}
+
 </style>
 </head>
 
