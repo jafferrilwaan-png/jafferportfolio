@@ -3552,7 +3552,7 @@ html.dark #about article.bg-white strong,
 html.dark #about article.bg-white em,
 html.dark #about article.bg-white span,
 html.dark #skills .bg-white,
-html.dark #skills .bg-white *,
+html.dark #skills .bg-white *:not(.skill-pct-badge):not(.skill-pct-badge *):not([class*="skill-pct"]):not([class*="skill-pct"] *),
 html.dark #skills .bg-white p {
   color: #000000 !important;
   -webkit-text-fill-color: #000000 !important;
@@ -3635,10 +3635,10 @@ html.dark .bg-white h3,
 html.dark .bg-white h4,
 html.dark .bg-white h5,
 html.dark .bg-white h6,
-html.dark .bg-white span:not(.bg-black *):not([class*="bg-black"] *):not(.badge-layer *):not([class*="text-[#"]):not([class*="text-[#"] *),
+html.dark .bg-white span:not(.bg-black):not(.bg-black *):not([class*="bg-black"]):not([class*="bg-black"] *):not(.skill-pct-badge):not(.skill-pct-badge *):not(.badge-layer *):not([class*="text-[#"]):not([class*="text-[#"] *),
 html.dark .bg-white strong,
 html.dark .bg-white em,
-html.dark .bg-white a:not(.bg-black):not([class*="bg-black"]),
+html.dark main .bg-white a:not(.bg-black):not([class*="bg-black"]),
 html.dark .bg-white summary,
 html.dark [class*="bg-white"] p,
 html.dark [class*="bg-white"] h1,
@@ -3647,16 +3647,16 @@ html.dark [class*="bg-white"] h3,
 html.dark [class*="bg-white"] h4,
 html.dark [class*="bg-white"] h5,
 html.dark [class*="bg-white"] h6,
-html.dark [class*="bg-white"] span:not(.bg-black *):not([class*="bg-black"] *):not(.badge-layer *):not([class*="text-[#"]):not([class*="text-[#"] *),
+html.dark [class*="bg-white"] span:not(.bg-black):not(.bg-black *):not([class*="bg-black"]):not([class*="bg-black"] *):not(.skill-pct-badge):not(.skill-pct-badge *):not(.badge-layer *):not([class*="text-[#"]):not([class*="text-[#"] *),
 html.dark [class*="bg-white"] strong,
 html.dark [class*="bg-white"] em,
-html.dark [class*="bg-white"] a:not(.bg-black):not([class*="bg-black"]),
+html.dark main [class*="bg-white"] a:not(.bg-black):not([class*="bg-black"]),
 html.dark [class*="bg-white"] summary,
 html.dark article.bg-white p,
 html.dark article.bg-white h1,
 html.dark article.bg-white h2,
 html.dark article.bg-white h3,
-html.dark article.bg-white span:not(.bg-black *):not([class*="bg-black"] *),
+html.dark article.bg-white span:not(.bg-black):not(.bg-black *):not([class*="bg-black"]):not([class*="bg-black"] *):not(.skill-pct-badge):not(.skill-pct-badge *),
 html.dark section[data-parallax-zone] .bg-white p,
 html.dark section[data-parallax-zone] .bg-white h2,
 html.dark section[data-parallax-zone] .bg-white h3,
@@ -3890,6 +3890,51 @@ html:not(.dark) header nav a[href="#contact"]:not(:hover) {
   color: #000000 !important;
   -webkit-text-fill-color: #000000 !important;
 }
+
+/* ==========================================================================
+   SKILLS BADGE & NAVBAR LINKS ULTIMATE HIGH-SPECIFICITY OVERRIDE
+   ========================================================================== */
+#skills .skill-pct-badge,
+#skills .skill-pct-badge *,
+#skills span.skill-pct-badge,
+#skills span.skill-pct-badge *,
+#skills [class*="skill-pct"],
+#skills [class*="skill-pct"] *,
+html.dark #skills .skill-pct-badge,
+html.dark #skills .skill-pct-badge *,
+html.dark #skills span.skill-pct-badge,
+html.dark #skills span.skill-pct-badge *,
+html.dark #skills [class*="skill-pct"],
+html.dark #skills [class*="skill-pct"] *,
+html.dark #skills .bg-white .skill-pct-badge,
+html.dark #skills .bg-white .skill-pct-badge *,
+html.dark #skills [class*="bg-white"] .skill-pct-badge,
+html.dark #skills [class*="bg-white"] .skill-pct-badge * {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+html.dark header.bg-white nav a.nav-desktop-link,
+html.dark header.bg-white nav a[href="#about"],
+html.dark header.bg-white nav a[href="#work"],
+html.dark header.bg-white nav a[href="#skills"],
+html.dark header.bg-white nav a[href="#journey"],
+html.dark header.bg-white nav a[href="#contact"],
+html.dark header.bg-white nav div.hidden a,
+html.dark header.bg-white nav div.lg\:flex a,
+html.dark header nav a.nav-desktop-link,
+html.dark header nav a[href="#about"],
+html.dark header nav a[href="#work"],
+html.dark header nav a[href="#skills"],
+html.dark header nav a[href="#journey"],
+html.dark header nav a[href="#contact"] {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
 </style>
 </head>
 
