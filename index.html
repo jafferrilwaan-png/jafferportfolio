@@ -2823,6 +2823,7 @@ Error generating stack: `+u.message+`
     var targetX = 0, targetY = 0;
     var currentX = 0, currentY = 0;
 
+    // Desktop: Mouse Move
     window.addEventListener('mousemove', function(e) {
       var rect = card.getBoundingClientRect();
       var cx = rect.left + rect.width / 2;
@@ -2834,6 +2835,47 @@ Error generating stack: `+u.message+`
     window.addEventListener('mouseleave', function() {
       targetX = 0; targetY = 0;
     });
+
+    // Mobile: Gyroscope tilt interaction
+    function handleOrientation(e) {
+      if (e.gamma === null || e.beta === null) return;
+      // Gamma: Left/Right tilt (-90 to +90). Full response around +/- 22 degrees
+      var gx = Math.max(-1, Math.min(1, e.gamma / 22));
+      // Beta: Front/Back tilt. Natural reading angle is ~45 degrees.
+      var gy = Math.max(-1, Math.min(1, (e.beta - 45) / 22));
+      targetX = gx;
+      targetY = gy;
+    }
+
+    if (window.DeviceOrientationEvent) {
+      if (typeof DeviceOrientationEvent.requestPermission === 'function') {
+        var askGyro = function() {
+          DeviceOrientationEvent.requestPermission().then(function(state) {
+            if (state === 'granted') {
+              window.addEventListener('deviceorientation', handleOrientation, { passive: true });
+            }
+          }).catch(function() {});
+          window.removeEventListener('touchstart', askGyro);
+          window.removeEventListener('click', askGyro);
+        };
+        window.addEventListener('touchstart', askGyro, { passive: true });
+        window.addEventListener('click', askGyro, { passive: true });
+      } else {
+        window.addEventListener('deviceorientation', handleOrientation, { passive: true });
+      }
+    }
+
+    // Mobile: Touch Move fallback
+    window.addEventListener('touchmove', function(e) {
+      if (e.touches && e.touches[0]) {
+        var t = e.touches[0];
+        var rect = card.getBoundingClientRect();
+        var cx = rect.left + rect.width / 2;
+        var cy = rect.top + rect.height / 2;
+        targetX = Math.max(-1, Math.min(1, (t.clientX - cx) / (window.innerWidth / 2)));
+        targetY = Math.max(-1, Math.min(1, (t.clientY - cy) / (window.innerHeight / 2)));
+      }
+    }, { passive: true });
 
     function loop() {
       currentX += (targetX - currentX) * 0.12;
