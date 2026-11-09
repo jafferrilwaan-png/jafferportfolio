@@ -1,49 +1,118 @@
-# ZERO — Interactive 3D WebGL Experience (Local Replica)
+<div align="center">
 
-This is a complete, bit-for-bit local deployment of the awards-level 3D WebGL experience from [https://why.zero.university/](https://why.zero.university/).
+<img src="https://placehold.co/1200x360/FFE600/000000?text=JAFFER+RILWAAN+%E2%80%94+I+DESIGN+LOUD.+I+BUILD+BOLD.&font=montserrat" width="100%" alt="JAFFER RILWAAN — NEO-BRUTALIST PORTFOLIO BANNER" />
 
-## 🚀 How to Run
+<br />
 
-### Instant Launch:
-```bash
-node server.js
-```
-Open **[http://localhost:3000](http://localhost:3000)** in Chrome, Edge, or Brave.
+<a href="https://jafferportfolio.vercel.app/#top">
+  <img src="https://img.shields.io/badge/LIVE_DEPLOYMENT-JAFFERPORTFOLIO.VERCEL.APP-FF2A85?style=flat-square&labelColor=000000&color=FF2A85" alt="LIVE DEPLOYMENT" />
+</a>
+<a href="https://jafferportfolio.vercel.app/#top">
+  <img src="https://img.shields.io/badge/DESIGN_SYSTEM-NEO--BRUTALISM-FFE600?style=flat-square&labelColor=000000&color=FFE600" alt="DESIGN SYSTEM" />
+</a>
+<a href="https://react.dev/">
+  <img src="https://img.shields.io/badge/ARCHITECTURE-REACT_18_%2F_ES6+-00F5D4?style=flat-square&labelColor=000000&color=00F5D4" alt="REACT ARCHITECTURE" />
+</a>
+<a href="https://www.blender.org/">
+  <img src="https://img.shields.io/badge/3D_PIPELINE-GLTF_%2F_SPLINE_%2F_THREE.JS-FF5E00?style=flat-square&labelColor=000000&color=FF5E00" alt="3D PIPELINE" />
+</a>
+<a href="mailto:seekajrrr@gmail.com">
+  <img src="https://img.shields.io/badge/STATUS-BOOKING_FEB_2027-00E676?style=flat-square&labelColor=000000&color=00E676" alt="BOOKING STATUS" />
+</a>
 
-### Custom Port (Optional):
-```powershell
-$env:PORT=8080; node server.js
+</div>
+
+<br />
+
+```text
++==================================================================================================+
+|  JAFFER RILWAAN  //  PRODUCT DESIGNER & FRONT-END DEVELOPER  //  CHENNAI, INDIA                  |
++==================================================================================================+
+|  MOTTO      : "I DESIGN LOUD. I BUILD BOLD. GOOD DESIGN SHOULD MAKE NOISE."                      |
+|  TAGS       : [ CHENNAI-BORN ]  [ SYSTEMS THINKER ]  [ PIXEL OBSESSED ]  [ 100% HANDMADE ]       |
+|  EXPERIENCE : 06+ YEARS MAKING  |  48 PROJECTS SHIPPED  |  18 HAPPY CLIENTS  |  12 AWARDS        |
++==================================================================================================+
 ```
 
 ---
 
-## 📂 Project Structure & Customization Guide
+## [ 01 // INTERFACE SCREENSHOTS & VISUAL PREVIEWS ]
 
-### 1. 🎨 Swapping Images & Textures
-All images and visual textures live in `public/assets/`:
-- **Backgrounds**: `public/assets/textures/stage2_background2.webp` and `stage3_background1.webp`
-- **UI & Cards**: `public/assets/ui/share-card_congrats.webp`, `zero_icon.jpg`, `plant.webp`
-- **Logos**: `public/assets/brand/nav_logo.svg` and `nav_logo_white.svg`
-- **MatCap Hand Shader**: `public/assets/textures/matcap-hand.webp`
+<table width="100%">
+  <thead>
+    <tr>
+      <th width="50%" align="left">01. HERO VIEWPORT & PARALLAX SPLIT ENGINE (LIGHT)</th>
+      <th width="50%" align="left">02. DARK MODE THEME ENGINE & WORK GALLERY</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td width="50%" valign="top">
+        <a href="https://jafferportfolio.vercel.app/#top">
+          <img src="https://image.thum.io/get/width/1200/crop/800/noanimate/https://jafferportfolio.vercel.app/" width="100%" alt="Hero Viewport Live Screenshot" />
+        </a>
+      </td>
+      <td width="50%" valign="top">
+        <a href="https://jafferportfolio.vercel.app/#work">
+          <img src="https://image.thum.io/get/width/1200/crop/800/noanimate/https://jafferportfolio.vercel.app/#work" width="100%" alt="Work Gallery Live Screenshot" />
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-*To replace any image, simply drop your new image into the respective folder with the same name, or update the asset paths.*
+---
 
-### 2. 🏙️ Modifying or Injecting Your 3D City Model
-All 3D models live in `public/assets/models/`:
-- **Stage 1 (Hands)**: `loader_hand.glb`, `human_hand_1.glb`, `fancy_hand_2.glb`
-- **Stage 2 (Shatter)**: `stage2_glass-shatter.glb`, `glass_shards.glb`, `human_hand_2.glb`
-- **Stage 3 (Tunnel / Environment)**: `tunnel_new_new.glb`
-- **Origami Animals**: `public/assets/origami/*.glb`
+## [ 02 // NEO-BRUTALIST DESIGN TOKENS & UI SYSTEM ]
 
-*To integrate your 3D City:*
-- You can replace `tunnel_new_new.glb` with your city model, or inject your city model directly into the Three.js stage sequence!
+| TOKEN NAME | HEX CODE | UI ROLE & COMPONENT ASSIGNMENT |
+| :--- | :--- | :--- |
+| `--ink-black` | `#000000` | Primary structural borders (`4px solid`), hard offset shadows (`8px 8px 0px`), display type |
+| `--surface-paper` | `#FFFDF7` | Primary light-mode canvas background with exposed structural grid lines |
+| `--acid-yellow` | `#FFE600` | Hero highlight containers, primary CTA buttons, active filter pills, marquee ribbons |
+| `--brutal-pink` | `#FF2A85` | `NEW*` project sticker tags, interactive hover inversions, accent callout cards |
+| `--signal-orange` | `#FF5E00` | Skill meter progress fills, secondary badge stamps, timeline milestone markers |
+| `--cyber-mint` | `#00F5D4` | Service tier highlight cards, floating geometric vector shapes, dark-mode accents |
+| `--neon-lime` | `#00E676` | Availability status indicator (`BOOKING FEB 2027`), form validation states |
 
-### 3. 🎵 Audio & Sound Effects
-All audio tracks live in `public/assets/audio/`:
-- **Music**: `amb_stage1.mp3`, `amb_stage2-3.mp3`
-- **Interactions**: `fx_loader-drag.mp3`, `fx_hand-entry.mp3`, `fx_glass-shatter.mp3`, `fx_tunnel.mp3`, `fx_xp-topup.mp3`, `fx_click.mp3`, `fx_whoosh.mp3`
+---
 
-### 4. ⚙️ WebGL Engine Components
-- **Draco Geometry Decoders**: `public/vendor/draco/`
-- **Basis/KTX2 Transcoders**: `public/vendor/basis/`
-- **Texture Atlases**: `public/assets/atlases/*.ktx2`
+## [ 03 // NATIVE GITHUB 3D MODEL VIEWPORT (.STL / .GLB / THREE.JS) ]
+
+```stl
+solid NeoBrutalistCube
+  facet normal 0.0 0.0 1.0
+    outer loop
+      vertex 0.0 0.0 10.0
+      vertex 10.0 0.0 10.0
+      vertex 10.0 10.0 10.0
+    endloop
+  endfacet
+  facet normal 0.0 0.0 1.0
+    outer loop
+      vertex 0.0 0.0 10.0
+      vertex 10.0 10.0 10.0
+      vertex 0.0 10.0 10.0
+    endloop
+  endfacet
+endsolid NeoBrutalistCube
+```
+
+---
+
+## [ 04 // FEATURED PROJECTS & CASE STUDY MATRIX ]
+
+| ID | PROJECT | CATEGORY | STACK | SUMMARY |
+| :--- | :--- | :--- | :--- | :--- |
+| **01** | **CHAI & CO. CAFE APP** | APP / MOBILE | `MOBILE UX`, `BRANDING`, `REACT` | Flavour-first ordering app with bold menus, one-tap favourites, and loyalty flow. |
+| **02** | **PAPER TRAIL** | PRODUCT | `PRODUCT`, `UI SYSTEM`, `PROTOTYPE` | Digital notebook with sticky notes, scribbles, and instant search. |
+| **03** | **MADRAS MARKET** | E-COMMERCE | `E-COMMERCE`, `DESIGN SYSTEM`, `FRONT-END` | Regional marketplace giving local sellers bold shelves and fast checkout. |
+| **04** | **DOODLE BOARD** | WEB APP | `WEB APP`, `INTERACTION`, `CANVAS` | Interactive canvas whiteboard for fast thinkers and product teams. |
+
+---
+
+## [ 05 // DIRECT CONTACT ]
+
+* **PORTFOLIO:** https://jafferportfolio.vercel.app/#top
+* **EMAIL:** seekajrrr@gmail.com
+* **LOCATION:** Chennai, Tamil Nadu, India
