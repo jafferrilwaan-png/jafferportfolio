@@ -1,118 +1,402 @@
 <div align="center">
 
-<img src="https://placehold.co/1200x360/FFE600/000000?text=JAFFER+RILWAAN+%E2%80%94+I+DESIGN+LOUD.+I+BUILD+BOLD.&font=montserrat" width="100%" alt="JAFFER RILWAAN — NEO-BRUTALIST PORTFOLIO BANNER" />
+<!-- NEO-BRUTALIST HARDWARE-STYLE REPO BANNER -->
+```text
++==================================================================================================+
+|  [ NEO-BRUTALIST UI DESIGN SYSTEM & 3D RUNTIME ENGINE ]                                          |
+|  SPEC: 4PX SOLID #000000 // 8PX 8PX HARD SHADOW // ZERO GRADIENTS // EXPOSED STRUCTURAL GRIDS    |
++==================================================================================================+
+```
 
 <br />
 
-<a href="https://jafferportfolio.vercel.app/#top">
-  <img src="https://img.shields.io/badge/LIVE_DEPLOYMENT-JAFFERPORTFOLIO.VERCEL.APP-FF2A85?style=flat-square&labelColor=000000&color=FF2A85" alt="LIVE DEPLOYMENT" />
-</a>
-<a href="https://jafferportfolio.vercel.app/#top">
-  <img src="https://img.shields.io/badge/DESIGN_SYSTEM-NEO--BRUTALISM-FFE600?style=flat-square&labelColor=000000&color=FFE600" alt="DESIGN SYSTEM" />
-</a>
-<a href="https://react.dev/">
-  <img src="https://img.shields.io/badge/ARCHITECTURE-REACT_18_%2F_ES6+-00F5D4?style=flat-square&labelColor=000000&color=00F5D4" alt="REACT ARCHITECTURE" />
-</a>
-<a href="https://www.blender.org/">
-  <img src="https://img.shields.io/badge/3D_PIPELINE-GLTF_%2F_SPLINE_%2F_THREE.JS-FF5E00?style=flat-square&labelColor=000000&color=FF5E00" alt="3D PIPELINE" />
-</a>
-<a href="mailto:seekajrrr@gmail.com">
-  <img src="https://img.shields.io/badge/STATUS-BOOKING_FEB_2027-00E676?style=flat-square&labelColor=000000&color=00E676" alt="BOOKING STATUS" />
-</a>
+<!-- HARD-EDGED FLAT-SQUARE TELEMETRY BADGES (ZERO EMOJIS) -->
+<img src="https://img.shields.io/badge/DESIGN_SYSTEM-NEO--BRUTALISM-FFE600?style=flat-square&labelColor=000000&color=FFE600" alt="DESIGN SYSTEM: NEO-BRUTALISM" />
+<img src="https://img.shields.io/badge/3D_RUNTIME-GLTF_%2F_GLB_%2F_SPLINE_%2F_RIVE-FF2A85?style=flat-square&labelColor=000000&color=FF2A85" alt="3D RUNTIME: GLTF GLB SPLINE RIVE" />
+<img src="https://img.shields.io/badge/COMPONENT_LAYER-REACT_18_%2F_CSS_TOKENS-00F5D4?style=flat-square&labelColor=000000&color=00F5D4" alt="COMPONENT LAYER: REACT 18" />
+<img src="https://img.shields.io/badge/SCROLL_PHYSICS-PARALLAX_TRIPLE_PLANE-FF5E00?style=flat-square&labelColor=000000&color=FF5E00" alt="SCROLL PHYSICS: PARALLAX" />
+<img src="https://img.shields.io/badge/AUDIT_STATUS-ZERO_EMOJIS_VERIFIED-00E676?style=flat-square&labelColor=000000&color=00E676" alt="AUDIT STATUS: ZERO EMOJIS" />
 
 </div>
 
 <br />
 
+---
+
+## [ 01 // INTERFACE SCREENSHOTS & VIEWPORT MOCKUPS ]
+
+### 1.1 PRIMARY NEO-BRUTALIST VIEWPORT CAPTURE (LIGHT THEME)
+> High-saturation `#FFE600` canvas, `4px solid #000` grid framing, asymmetric display blocks, and hard offset drop shadows.
+
+<div align="center">
+  <img src="./assets/screenshots/01-light-theme-viewport.jpg" width="100%" alt="Neo-Brutalist Light Theme Viewport Screenshot" />
+</div>
+
+<br />
+
+### 1.2 INTERACTIVE 3D WEBGL & GLB RUNTIME CONSOLE (DARK THEME)
+> Real-time 3D model viewport supporting `.glb`, `.gltf`, and `.riv` assets with hard-edge wireframe shaders and viewport telemetry.
+
+<div align="center">
+  <img src="./assets/screenshots/02-dark-theme-3d-console.jpg" width="100%" alt="Interactive 3D WebGL and GLB Runtime Viewport Screenshot" />
+</div>
+
+---
+
+## [ 02 // 3D MODEL PIPELINE: GLB, RIVE (.RIV), SPLINE & GITHUB STL ]
+
+This UI system natively ingests and renders interactive 3D assets across both GitHub Markdown and web client runtimes.
+
 ```text
 +==================================================================================================+
-|  JAFFER RILWAAN  //  PRODUCT DESIGNER & FRONT-END DEVELOPER  //  CHENNAI, INDIA                  |
+| [ PIPELINE ARCHITECTURE ]                                                                        |
+| BLENDER (.blend) ----> EXPORT (.glb / .gltf / .stl) ----> WEBGL THREE.JS / GITHUB 3D VIEWPORT    |
+| RIVE STUDIO ---------> EXPORT (.riv STATE MACHINE)   ----> @rive-app/react-canvas RUNTIME       |
+| SPLINE 3D -----------> EXPORT (.splinecode SCENE)    ----> FOREGROUND PARALLAX PLANE (1.6x)     |
 +==================================================================================================+
-|  MOTTO      : "I DESIGN LOUD. I BUILD BOLD. GOOD DESIGN SHOULD MAKE NOISE."                      |
-|  TAGS       : [ CHENNAI-BORN ]  [ SYSTEMS THINKER ]  [ PIXEL OBSESSED ]  [ 100% HANDMADE ]       |
-|  EXPERIENCE : 06+ YEARS MAKING  |  48 PROJECTS SHIPPED  |  18 HAPPY CLIENTS  |  12 AWARDS        |
-+==================================================================================================+
+```
+
+### 2.1 NATIVE GITHUB README 3D STL VIEWER (INTERACTIVE WEBOBJECT)
+
+GitHub natively renders an interactive, rotatable 3D canvas directly inside Markdown when given an `stl` mesh definition:
+
+```stl
+solid NeoBrutalistMonolith
+  facet normal 0.0 0.0 1.0
+    outer loop
+      vertex 0.0 0.0 12.0
+      vertex 12.0 0.0 12.0
+      vertex 12.0 12.0 12.0
+    endloop
+  endfacet
+  facet normal 0.0 0.0 1.0
+    outer loop
+      vertex 0.0 0.0 12.0
+      vertex 12.0 12.0 12.0
+      vertex 0.0 12.0 12.0
+    endloop
+  endfacet
+  facet normal 0.0 0.0 -1.0
+    outer loop
+      vertex 0.0 0.0 0.0
+      vertex 12.0 12.0 0.0
+      vertex 12.0 0.0 0.0
+    endloop
+  endfacet
+  facet normal 0.0 0.0 -1.0
+    outer loop
+      vertex 0.0 0.0 0.0
+      vertex 0.0 12.0 0.0
+      vertex 12.0 12.0 0.0
+    endloop
+  endfacet
+  facet normal 0.0 1.0 0.0
+    outer loop
+      vertex 0.0 12.0 0.0
+      vertex 12.0 12.0 12.0
+      vertex 12.0 12.0 0.0
+    endloop
+  endfacet
+  facet normal 0.0 1.0 0.0
+    outer loop
+      vertex 0.0 12.0 0.0
+      vertex 0.0 12.0 12.0
+      vertex 12.0 12.0 12.0
+    endloop
+  endfacet
+  facet normal 0.0 -1.0 0.0
+    outer loop
+      vertex 0.0 0.0 0.0
+      vertex 12.0 0.0 0.0
+      vertex 12.0 0.0 12.0
+    endloop
+  endfacet
+  facet normal 0.0 -1.0 0.0
+    outer loop
+      vertex 0.0 0.0 0.0
+      vertex 12.0 0.0 12.0
+      vertex 0.0 0.0 12.0
+    endloop
+  endfacet
+  facet normal 1.0 0.0 0.0
+    outer loop
+      vertex 12.0 0.0 0.0
+      vertex 12.0 12.0 0.0
+      vertex 12.0 12.0 12.0
+    endloop
+  endfacet
+  facet normal 1.0 0.0 0.0
+    outer loop
+      vertex 12.0 0.0 0.0
+      vertex 12.0 12.0 12.0
+      vertex 12.0 0.0 12.0
+    endloop
+  endfacet
+  facet normal -1.0 0.0 0.0
+    outer loop
+      vertex 0.0 0.0 0.0
+      vertex 0.0 0.0 12.0
+      vertex 0.0 12.0 12.0
+    endloop
+  endfacet
+  facet normal -1.0 0.0 0.0
+    outer loop
+      vertex 0.0 0.0 0.0
+      vertex 0.0 12.0 12.0
+      vertex 0.0 12.0 0.0
+    endloop
+  endfacet
+endsolid NeoBrutalistMonolith
+```
+
+### 2.2 PRODUCTION GLB / THREE.JS STAGE COMPONENT (`<BrutalGLBViewer />`)
+
+Mounts binary `.glb` or `.gltf` 3D models with a strict neo-brutalist cel-shading outline pass and responsive camera controls:
+
+```jsx
+// src/components/BrutalGLBViewer.jsx
+import React, { useRef, useEffect } from 'react';
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+
+export default function BrutalGLBViewer({
+  modelPath = '/assets/models/brutal-monolith.glb',
+  accentColor = '#FFE600'
+}) {
+  const mountRef = useRef(null);
+
+  useEffect(() => {
+    const container = mountRef.current;
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 100);
+    camera.position.set(0, 1.5, 4.5);
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setSize(container.clientWidth, container.clientHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    container.appendChild(renderer.domElement);
+
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.05;
+
+    // Hard ambient light + directional ink key light
+    const ambientLight = new THREE.AmbientLight(0xffffff, 1.2);
+    scene.add(ambientLight);
+    const keyLight = new THREE.DirectionalLight(0xffffff, 2.0);
+    keyLight.position.set(5, 10, 7);
+    scene.add(keyLight);
+
+    // GLTF / GLB Loader
+    const loader = new GLTFLoader();
+    loader.load(modelPath, (gltf) => {
+      const model = gltf.scene;
+      model.traverse((child) => {
+        if (child.isMesh) {
+          // Hard neo-brutalist ink edge outline
+          const edges = new THREE.EdgesGeometry(child.geometry);
+          const line = new THREE.LineSegments(edges, new THREE.LineBasicMaterial({ color: 0x000000, linewidth: 2 }));
+          child.add(line);
+        }
+      });
+      scene.add(model);
+    });
+
+    let animationFrameId;
+    const animate = () => {
+      animationFrameId = requestAnimationFrame(animate);
+      controls.update();
+      renderer.render(scene, camera);
+    };
+    animate();
+
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+      renderer.dispose();
+      container.innerHTML = '';
+    };
+  }, [modelPath]);
+
+  return (
+    <div className="brutal-card" style={{ padding: '20px', backgroundColor: accentColor }}>
+      <div style={{ borderBottom: '4px solid #000', paddingBottom: '8px', marginBottom: '12px', fontWeight: 'bold' }}>
+        [ 3D GLB VIEWPORT CONSOLE ]
+      </div>
+      <div ref={mountRef} style={{ width: '100%', height: '380px', border: '4px solid #000', backgroundColor: '#FFFDF7' }} />
+    </div>
+  );
+}
+```
+
+### 2.3 RIVE ANIMATION ENGINE INTEGRATION (`.RIV`)
+
+For state-machine vector animation files (`.riv`):
+
+```jsx
+// src/components/BrutalRiveAsset.jsx
+import React from 'react';
+import { useRive, useStateMachineInput } from '@rive-app/react-canvas';
+
+export default function BrutalRiveAsset({ src = '/assets/rive/brutal-stickers.riv' }) {
+  const { rive, RiveComponent } = useRive({
+    src,
+    stateMachines: 'STATE_MACHINE_1',
+    autoplay: true,
+  });
+
+  const triggerHover = useStateMachineInput(rive, 'STATE_MACHINE_1', 'isHovered');
+
+  return (
+    <div 
+      className="brutal-border brutal-shadow" 
+      style={{ width: '100%', height: '300px', backgroundColor: '#00F5D4' }}
+      onMouseEnter={() => triggerHover && (triggerHover.value = true)}
+      onMouseLeave={() => triggerHover && (triggerHover.value = false)}
+    >
+      <RiveComponent />
+    </div>
+  );
+}
 ```
 
 ---
 
-## [ 01 // INTERFACE SCREENSHOTS & VISUAL PREVIEWS ]
+## [ 03 // COMPLETE NEO-BRUTALIST UI COMPONENT CATALOG ]
+
+Every visual element strictly enforces high-contrast ink boundaries, geometric layout rules, and zero rounded fluff:
 
 <table width="100%">
   <thead>
     <tr>
-      <th width="50%" align="left">01. HERO VIEWPORT & PARALLAX SPLIT ENGINE (LIGHT)</th>
-      <th width="50%" align="left">02. DARK MODE THEME ENGINE & WORK GALLERY</th>
+      <th width="25%" align="left">COMPONENT</th>
+      <th width="35%" align="left">VISUAL PRIMITIVES</th>
+      <th width="40%" align="left">CSS SPECIFICATION</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td width="50%" valign="top">
-        <a href="https://jafferportfolio.vercel.app/#top">
-          <img src="https://image.thum.io/get/width/1200/crop/800/noanimate/https://jafferportfolio.vercel.app/" width="100%" alt="Hero Viewport Live Screenshot" />
-        </a>
-      </td>
-      <td width="50%" valign="top">
-        <a href="https://jafferportfolio.vercel.app/#work">
-          <img src="https://image.thum.io/get/width/1200/crop/800/noanimate/https://jafferportfolio.vercel.app/#work" width="100%" alt="Work Gallery Live Screenshot" />
-        </a>
-      </td>
+      <td><b>01. DISPLAY CONTAINER</b><br /><code>&lt;BrutalCard /&gt;</code></td>
+      <td>Unrounded rectangular box, high-saturation color field, structural 4px black frame.</td>
+      <td><code>border: 4px solid #000;<br />box-shadow: 8px 8px 0px #000;<br />border-radius: 0px;</code></td>
+    </tr>
+    <tr>
+      <td><b>02. TACTILE ACTION BUTTON</b><br /><code>&lt;BrutalButton /&gt;</code></td>
+      <td>High-contrast text, 3px solid ink border, mechanical active click depression.</td>
+      <td><code>box-shadow: 5px 5px 0px #000;<br />active: translate(4px, 4px);<br />active-shadow: 1px 1px 0px #000;</code></td>
+    </tr>
+    <tr>
+      <td><b>03. STICKER BADGE / PILL</b><br /><code>&lt;StickerTag /&gt;</code></td>
+      <td>Sharp rotated badge stamp, monospaced typography, solid background fill.</td>
+      <td><code>transform: rotate(-3deg);<br />border: 2px solid #000;<br />box-shadow: 3px 3px 0px #000;</code></td>
+    </tr>
+    <tr>
+      <td><b>04. MULTI-PLANE PARALLAX</b><br /><code>&lt;ParallaxDeck /&gt;</code></td>
+      <td>Three stacked scroll planes separating along the Z-axis during scrolling.</td>
+      <td><code>Back (0.2x depth)<br />Mid (0.8x depth)<br />Front (1.6x depth)</code></td>
+    </tr>
+    <tr>
+      <td><b>05. CONTINUOUS MARQUEE</b><br /><code>&lt;MarqueeRibbon /&gt;</code></td>
+      <td>Full-bleed high-contrast ticker band cycling uppercase status strings infinitely.</td>
+      <td><code>animation: marquee 20s linear infinite;<br />border-top: 4px solid #000;<br />border-bottom: 4px solid #000;</code></td>
+    </tr>
+    <tr>
+      <td><b>06. HARD PROGRESS METER</b><br /><code>&lt;BrutalMeter /&gt;</code></td>
+      <td>Divided capacity track with solid color fill and no rounded caps.</td>
+      <td><code>border: 3px solid #000;<br />fill: #FFE600 / #FF2A85 / #00F5D4;<br />divider: 2px solid #000;</code></td>
+    </tr>
+    <tr>
+      <td><b>07. INTERACTIVE ACCORDION</b><br /><code>&lt;BrutalAccordion /&gt;</code></td>
+      <td>Hard-bordered drawer cards with bold plus/minus indicators.</td>
+      <td><code>border-bottom: 3px solid #000;<br />transition: height 120ms ease;</code></td>
     </tr>
   </tbody>
 </table>
 
 ---
 
-## [ 02 // NEO-BRUTALIST DESIGN TOKENS & UI SYSTEM ]
+## [ 04 // NEO-BRUTALIST DESIGN TOKENS & CSS VARIABLES ]
 
-| TOKEN NAME | HEX CODE | UI ROLE & COMPONENT ASSIGNMENT |
-| :--- | :--- | :--- |
-| `--ink-black` | `#000000` | Primary structural borders (`4px solid`), hard offset shadows (`8px 8px 0px`), display type |
-| `--surface-paper` | `#FFFDF7` | Primary light-mode canvas background with exposed structural grid lines |
-| `--acid-yellow` | `#FFE600` | Hero highlight containers, primary CTA buttons, active filter pills, marquee ribbons |
-| `--brutal-pink` | `#FF2A85` | `NEW*` project sticker tags, interactive hover inversions, accent callout cards |
-| `--signal-orange` | `#FF5E00` | Skill meter progress fills, secondary badge stamps, timeline milestone markers |
-| `--cyber-mint` | `#00F5D4` | Service tier highlight cards, floating geometric vector shapes, dark-mode accents |
-| `--neon-lime` | `#00E676` | Availability status indicator (`BOOKING FEB 2027`), form validation states |
+```css
+:root {
+  /* RAW INK & CANVAS SURFACES */
+  --ink-black: #000000;
+  --surface-paper: #FFFDF7;
+  --surface-card: #FFFFFF;
 
----
+  /* HIGH-SATURATION ACCENT PALETTE */
+  --acid-yellow: #FFE600;
+  --brutal-pink: #FF2A85;
+  --signal-orange: #FF5E00;
+  --cyber-mint: #00F5D4;
+  --neon-lime: #00E676;
 
-## [ 03 // NATIVE GITHUB 3D MODEL VIEWPORT (.STL / .GLB / THREE.JS) ]
+  /* HARD STRUCTURAL BORDERS */
+  --border-thick: 4px solid #000000;
+  --border-mid: 3px solid #000000;
+  --border-thin: 2px solid #000000;
 
-```stl
-solid NeoBrutalistCube
-  facet normal 0.0 0.0 1.0
-    outer loop
-      vertex 0.0 0.0 10.0
-      vertex 10.0 0.0 10.0
-      vertex 10.0 10.0 10.0
-    endloop
-  endfacet
-  facet normal 0.0 0.0 1.0
-    outer loop
-      vertex 0.0 0.0 10.0
-      vertex 10.0 10.0 10.0
-      vertex 0.0 10.0 10.0
-    endloop
-  endfacet
-endsolid NeoBrutalistCube
+  /* HARD OFFSET DROP SHADOWS (ZERO BLUR) */
+  --shadow-heavy: 8px 8px 0px #000000;
+  --shadow-mid: 5px 5px 0px #000000;
+  --shadow-light: 3px 3px 0px #000000;
+  --shadow-active: 1px 1px 0px #000000;
+
+  /* MECHANICAL MOTION */
+  --transition-snap: cubic-bezier(0.16, 1, 0.3, 1) 100ms;
+}
+
+/* DARK MODE THEME INVERSION */
+body.dark-theme {
+  --ink-black: #000000;
+  --surface-paper: #0E0E10;
+  --surface-card: #18181C;
+  --border-thick: 4px solid #FFFDF7;
+  --shadow-heavy: 8px 8px 0px #FFE600;
+}
 ```
 
 ---
 
-## [ 04 // FEATURED PROJECTS & CASE STUDY MATRIX ]
+## [ 05 // DIRECTORY ARCHITECTURE FOR UI REPOSITORY ]
 
-| ID | PROJECT | CATEGORY | STACK | SUMMARY |
-| :--- | :--- | :--- | :--- | :--- |
-| **01** | **CHAI & CO. CAFE APP** | APP / MOBILE | `MOBILE UX`, `BRANDING`, `REACT` | Flavour-first ordering app with bold menus, one-tap favourites, and loyalty flow. |
-| **02** | **PAPER TRAIL** | PRODUCT | `PRODUCT`, `UI SYSTEM`, `PROTOTYPE` | Digital notebook with sticky notes, scribbles, and instant search. |
-| **03** | **MADRAS MARKET** | E-COMMERCE | `E-COMMERCE`, `DESIGN SYSTEM`, `FRONT-END` | Regional marketplace giving local sellers bold shelves and fast checkout. |
-| **04** | **DOODLE BOARD** | WEB APP | `WEB APP`, `INTERACTION`, `CANVAS` | Interactive canvas whiteboard for fast thinkers and product teams. |
+```text
+neo-brutalist-ui/
+├── public/
+│   ├── assets/
+│   │   ├── screenshots/
+│   │   │   ├── 01-light-theme-viewport.jpg
+│   │   │   └── 02-dark-theme-3d-console.jpg
+│   │   └── stickers/
+│   │       ├── badge-warning.svg
+│   │       └── star-vector.svg
+│   ├── models/
+│   │   ├── brutal-monolith.glb        # Binary GLTF 3D model
+│   │   └── viewport-mesh.stl          # Native GitHub Markdown 3D mesh
+│   └── rive/
+│       └── brutal-stickers.riv        # Interactive Rive state-machine asset
+├── src/
+│   ├── components/
+│   │   ├── BrutalCard.jsx
+│   │   ├── BrutalButton.jsx
+│   │   ├── BrutalGLBViewer.jsx        # 3D GLB/Three.js interactive stage
+│   │   ├── BrutalRiveAsset.jsx        # Rive runtime animation wrapper
+│   │   ├── ParallaxDeck.jsx           # 0.2x / 0.8x / 1.6x scroll engine
+│   │   ├── MarqueeRibbon.jsx          # Infinite keyframe ticker
+│   │   ├── BrutalMeter.jsx            # High-contrast percentage bar
+│   │   └── BrutalAccordion.jsx        # Collapsible drawer console
+│   ├── styles/
+│   │   ├── tokens.css                 # Color tokens, borders & 8px shadows
+│   │   ├── brutal-grid.css            # 32px structural background grid
+│   │   └── typography.css             # Grotesque display & mono fonts
+│   ├── App.jsx
+│   └── main.jsx
+├── package.json
+└── README.md
+```
 
 ---
 
-## [ 05 // DIRECT CONTACT ]
-
-* **PORTFOLIO:** https://jafferportfolio.vercel.app/#top
-* **EMAIL:** seekajrrr@gmail.com
-* **LOCATION:** Chennai, Tamil Nadu, India
+<div align="center">
+  <b>STRICT NEO-BRUTALIST UI ENGINE // ZERO EMOJIS // HARD STRUCTURAL GRIDS</b>
+</div>
