@@ -44,4 +44,4 @@ endsolid NeoBrutalistMonolith
 | **02. TACTILE ACTION BUTTON** | High-contrast text, 3px solid ink border, mechanical active depression. | `box-shadow: 5px 5px 0px #000; active: translate(4px, 4px);` |
 | **03. STICKER BADGE / PILL** | Sharp rotated badge stamp, monospaced typography, solid background fill. | `transform: rotate(-3deg); border: 2px solid #000;` |
 | **04. MULTI-PLANE PARALLAX** | Three stacked scroll planes separating along the Z-axis. | `Back (0.2x), Mid (0.8x), Front (1.6x)` |
-| **05. HARD PROGRESS METER** | Divided capacity track with solid color fill and no rounded caps. | `border: 3px solid #000; fill: #FFE600 / #FF2A85;` | 
+| **05. HARD PROGRESS METER** | Divided capacity track with solid color fill and no rounded caps. | `border: 3px solid #000; fill: #FFE600 / #FF2A85;` |  
